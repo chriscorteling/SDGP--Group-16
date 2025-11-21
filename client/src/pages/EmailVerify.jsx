@@ -32,7 +32,7 @@ function EmailVerify() {
       const otpArray = inputRefs.current.map(e => e.value)
       const otp = otpArray.join('')
 
-      
+
     } catch (error) {
       
     }
@@ -42,7 +42,7 @@ function EmailVerify() {
     <div className='flex felx-col items-center justify-center min-h-screen bg-[#050505]'>
       <Navbar/>
 
-      <form className='bg-[#121212] p-8 rounded-lg shadow-lg w-96 text-sm'>
+      <form onSubmit={onSubmitHandler} className='bg-[#121212] p-8 rounded-lg shadow-lg w-96 text-sm'>
         <h1 className='text-white text-2xl font-semibold text-center mb-4'>Email Verify OTP</h1>
         <p className='text-center mb-6 text-[#018801]'>Enter this 6-digit code sent to your email id.</p>
 
