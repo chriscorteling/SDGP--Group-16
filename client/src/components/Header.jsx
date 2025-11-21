@@ -1,7 +1,9 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
+  const navigate = useNavigate()
   return (
     <div className='flex flex-col items-center mt-20 px-4 text-center text-white'>
         
@@ -15,7 +17,7 @@ function Header() {
 
       <p className='mb-8 max-w-md'>Let the journey of programming begins!</p>
 
-      <button className='border border-none rounded-2xl px-8 py-2.5 bg-[#018801] hover:bg-[#018801a3] transition-all'>Get Started</button>
+      <button onClick={() => navigate('/login')} className='border border-none rounded-2xl px-8 py-2.5 bg-[#018801] hover:bg-[#018801a3] transition-all'>Get Started</button>
     </div>
   )
 }

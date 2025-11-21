@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
 import { AppContent } from '../context/AppContext'
 import axios from 'axios'
+import Navbar from '../components/Navbar'
 
 function Login() {
 
@@ -37,11 +38,12 @@ function Login() {
     }
 
   return (
-    <div className='flex items-center justify-center min-h-screen sm:px-6 bg-[#050505]'>
-        <div className="w-full flex items-center p-4 sm:p-6 sm:px-24 absolute top-0"></div>
-      <img onClick={() => navigate('/')} src={assets.crackcode_dark_logo} alt="" className='absolute top-5 sm:left-20 
-      top-5 w-28 sm:w-32 cursor-pointer'/>
-      <div className='bg-[#121212] p-10 rounded-lg shadow-lg w-f sm:w-96 text-[#018801] text-sm'>
+    <div className='flex felx-col items-center justify-center min-h-screen bg-[#050505]'>
+        <div onClick={() => navigate('/')} className="w-full absolute top-0 cursor-pointer">
+            <Navbar/>
+        </div>
+            
+        <div className='bg-[#121212] p-10 rounded-lg shadow-lg w-f sm:w-96 text-[#018801] text-sm'>
 
         <h2 className='text-3xl font-semibold text-white text-center mb-3'>{state == 'Sign Up' ? 'Create Account' : 'Login'}</h2>
 
