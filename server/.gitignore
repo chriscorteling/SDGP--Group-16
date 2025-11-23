@@ -1,0 +1,19 @@
+# Node.js dependencies
+/node_modules/
+
+# Environment variables
+/.env
+
+# Logs
+/logs/
+/*.log
+
+# Temporary files from editor
+/.vscode/
+/.idea/
+
+# Operating System files
+.DS_Store
+
+# npm package lock file 
+package-lock.json
